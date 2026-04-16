@@ -85,31 +85,36 @@ if ("IntersectionObserver" in window) {
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-typedItems.forEach((item) => {
-  const fullText = item.dataset.typedText || item.textContent || "";
+function runTypingEffect() {
+  typedItems.forEach((item) => {
+    const fullText = item.dataset.typedText || item.textContent || "";
 
-  if (!fullText) {
-    return;
-  }
-
-  if (prefersReducedMotion) {
-    item.textContent = fullText;
-    return;
-  }
-
-  item.textContent = "";
-
-  let index = 0;
-
-  const typeNext = () => {
-    item.textContent = fullText.slice(0, index + 1);
-    index += 1;
-
-    if (index < fullText.length) {
-      const delay = fullText[index] === " " ? 32 : 46;
-      window.setTimeout(typeNext, delay);
+    if (!fullText) {
+      return;
     }
-  };
 
-  window.setTimeout(typeNext, 180);
-});
+    if (prefersReducedMotion) {
+      item.textContent = fullText;
+      return;
+    }
+
+    item.textContent = "";
+
+    let index = 0;
+
+    const typeNext = () => {
+      item.textContent = fullText.slice(0, index + 1);
+      index += 1;
+
+      if (index < fullText.length) {
+        const currentChar = fullText[index];
+        const delay = currentChar === " " ? 120 : 82;
+        window.setTimeout(typeNext, delay);
+      }
+    };
+
+    window.setTimeout(typeNext, 520);
+  });
+}
+
+window.addEventListener("load", runTypingEffect);

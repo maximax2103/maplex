@@ -101,10 +101,27 @@ input {
   padding: 6px 0;
 }
 
-.brand img {
-  width: auto;
-  height: 46px;
+.brand-frame {
+  width: 236px;
+  height: 56px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 100%;
+  height: auto;
   display: block;
+  transform: scale(2.55);
+  transform-origin: left center;
+}
+
+.footer-logo {
+  width: 220px;
+  height: auto;
+  transform: scale(1.55);
+  transform-origin: left center;
 }
 
 .nav {
@@ -177,7 +194,7 @@ input {
 
 .hero-copy h1 {
   font-size: clamp(3.1rem, 8vw, 6rem);
-  max-width: 11.2ch;
+  max-width: 13.2ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -188,15 +205,15 @@ input {
 
 .typed-text {
   position: relative;
-  min-height: 2.9em;
+  min-height: 3.1em;
 }
 
 .typed-text::after {
   content: "";
   display: inline-block;
-  width: 0.08em;
-  height: 0.9em;
-  margin-left: 0.08em;
+  width: 0.1em;
+  height: 0.86em;
+  margin-left: 0.1em;
   vertical-align: -0.08em;
   background: currentColor;
   animation: caret-blink 0.9s steps(1, end) infinite;
@@ -906,8 +923,18 @@ body.modal-open {
     padding-top: 28px;
   }
 
-  .brand img {
-    height: 38px;
+  .brand-frame {
+    width: 188px;
+    height: 44px;
+  }
+
+  .brand-logo {
+    transform: scale(2.45);
+  }
+
+  .footer-logo {
+    width: 180px;
+    transform: scale(1.35);
   }
 
   .cta-box,
