@@ -94,6 +94,16 @@ input {
   min-height: 78px;
 }
 
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand img {
+  width: auto;
+  height: 48px;
+}
+
 .nav {
   display: none;
   gap: 22px;
@@ -164,7 +174,7 @@ input {
 
 .hero-copy h1 {
   font-size: clamp(2.6rem, 9vw, 5.8rem);
-  max-width: 11ch;
+  max-width: 12ch;
 }
 
 .hero-text,
@@ -205,6 +215,7 @@ input {
   flex-direction: column;
   gap: 12px;
   margin: 28px 0 20px;
+  justify-content: center;
 }
 
 .hero-points,
@@ -241,26 +252,51 @@ input {
 
 .hero-visual {
   position: relative;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .hero-visual::before {
   content: "";
   position: absolute;
-  inset: 5% 8% auto;
-  height: 84%;
-  border-radius: 40px;
+  inset: 6% 10% auto;
+  height: 82%;
+  border-radius: 52px;
   background: linear-gradient(145deg, rgba(245, 75, 75, 0.18), rgba(52, 103, 255, 0.15));
   filter: blur(14px);
+}
+
+.hero-copy {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-copy .eyebrow {
+  justify-content: center;
+}
+
+.hero-copy .hero-text {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-copy .hero-points {
+  display: inline-grid;
+  gap: 8px;
+  text-align: left;
+}
+
+.hero-compare-grid {
+  display: grid;
+  gap: 18px;
 }
 
 .compare-card {
   position: relative;
   z-index: 1;
-  margin-bottom: 18px;
-}
-
-.compare-card-good {
-  transform: translateX(8%);
+  margin-bottom: 0;
 }
 
 .compare-label,
@@ -758,7 +794,10 @@ body.modal-open {
     flex-wrap: wrap;
   }
 
-  .hero-grid,
+  .hero-grid {
+    justify-items: center;
+  }
+
   .pricing-wrap,
   .cta-box,
   .footer-grid {
@@ -784,6 +823,11 @@ body.modal-open {
 
   .cases-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-compare-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
   }
 }
 
@@ -824,8 +868,8 @@ body.modal-open {
     padding-top: 28px;
   }
 
-  .compare-card-good {
-    transform: none;
+  .brand img {
+    height: 40px;
   }
 
   .cta-box,
