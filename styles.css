@@ -101,7 +101,8 @@ input {
 
 .brand img {
   width: auto;
-  height: 48px;
+  height: 32px;
+  display: block;
 }
 
 .nav {
@@ -173,8 +174,10 @@ input {
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.6rem, 9vw, 5.8rem);
-  max-width: 12ch;
+  font-size: clamp(3.1rem, 8vw, 6rem);
+  max-width: 8.3ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-text,
@@ -268,7 +271,7 @@ input {
 }
 
 .hero-copy {
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -278,7 +281,7 @@ input {
 }
 
 .hero-copy .hero-text {
-  max-width: 760px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -291,6 +294,7 @@ input {
 .hero-compare-grid {
   display: grid;
   gap: 18px;
+  margin-top: 10px;
 }
 
 .compare-card {
@@ -869,7 +873,7 @@ body.modal-open {
   }
 
   .brand img {
-    height: 40px;
+    height: 28px;
   }
 
   .cta-box,
