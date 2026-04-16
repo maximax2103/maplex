@@ -101,27 +101,17 @@ input {
   padding: 6px 0;
 }
 
-.brand-frame {
-  width: 236px;
-  height: 56px;
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-}
-
 .brand-logo {
-  width: 100%;
+  width: auto;
   height: auto;
   display: block;
-  transform: scale(2.55);
-  transform-origin: left center;
+  max-width: 236px;
+  max-height: 56px;
 }
 
 .footer-logo {
   width: 220px;
   height: auto;
-  transform: scale(1.55);
-  transform-origin: left center;
 }
 
 .nav {
@@ -197,26 +187,6 @@ input {
   max-width: 15.4ch;
   margin-left: auto;
   margin-right: auto;
-}
-
-.hero-title {
-  text-wrap: balance;
-}
-
-.typed-text {
-  position: relative;
-  min-height: 3.1em;
-}
-
-.typed-text::after {
-  content: "";
-  display: inline-block;
-  width: 0.1em;
-  height: 0.86em;
-  margin-left: 0.1em;
-  vertical-align: -0.08em;
-  background: currentColor;
-  animation: caret-blink 0.9s steps(1, end) infinite;
 }
 
 .hero-text,
@@ -793,18 +763,6 @@ input {
   transform: translateY(0);
 }
 
-@keyframes caret-blink {
-  0%,
-  49% {
-    opacity: 1;
-  }
-
-  50%,
-  100% {
-    opacity: 0;
-  }
-}
-
 body.modal-open {
   overflow: hidden;
 }
@@ -931,18 +889,13 @@ body.modal-open {
     padding-top: 28px;
   }
 
-  .brand-frame {
-    width: 188px;
-    height: 44px;
-  }
-
   .brand-logo {
-    transform: scale(2.45);
+    max-width: 188px;
+    max-height: 44px;
   }
 
   .footer-logo {
     width: 180px;
-    transform: scale(1.35);
   }
 
   .cta-box,

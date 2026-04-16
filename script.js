@@ -4,7 +4,6 @@ const closeButtons = document.querySelectorAll("[data-close-modal]");
 const form = document.querySelector("#lead-form");
 const result = document.querySelector("#form-result");
 const revealItems = document.querySelectorAll(".reveal");
-const typedItems = document.querySelectorAll(".typed-text");
 
 function openModal() {
   modal.classList.add("is-open");
@@ -82,39 +81,3 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
-
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-function runTypingEffect() {
-  typedItems.forEach((item) => {
-    const fullText = item.dataset.typedText || item.textContent || "";
-
-    if (!fullText) {
-      return;
-    }
-
-    if (prefersReducedMotion) {
-      item.textContent = fullText;
-      return;
-    }
-
-    item.textContent = "";
-
-    let index = 0;
-
-    const typeNext = () => {
-      item.textContent = fullText.slice(0, index + 1);
-      index += 1;
-
-      if (index < fullText.length) {
-        const currentChar = fullText[index];
-        const delay = currentChar === " " ? 120 : 82;
-        window.setTimeout(typeNext, delay);
-      }
-    };
-
-    window.setTimeout(typeNext, 520);
-  });
-}
-
-window.addEventListener("load", runTypingEffect);
