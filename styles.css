@@ -91,17 +91,19 @@ input {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  min-height: 78px;
+  min-height: 92px;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
+  padding: 6px 0;
 }
 
 .brand img {
   width: auto;
-  height: 32px;
+  height: 46px;
   display: block;
 }
 
@@ -175,9 +177,29 @@ input {
 
 .hero-copy h1 {
   font-size: clamp(3.1rem, 8vw, 6rem);
-  max-width: 8.3ch;
+  max-width: 11.2ch;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-title {
+  text-wrap: balance;
+}
+
+.typed-text {
+  position: relative;
+  min-height: 2.9em;
+}
+
+.typed-text::after {
+  content: "";
+  display: inline-block;
+  width: 0.08em;
+  height: 0.9em;
+  margin-left: 0.08em;
+  vertical-align: -0.08em;
+  background: currentColor;
+  animation: caret-blink 0.9s steps(1, end) infinite;
 }
 
 .hero-text,
@@ -754,6 +776,18 @@ input {
   transform: translateY(0);
 }
 
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 body.modal-open {
   overflow: hidden;
 }
@@ -857,7 +891,7 @@ body.modal-open {
 
 @media (max-width: 767px) {
   .header-inner {
-    min-height: 72px;
+    min-height: 82px;
   }
 
   .button-small {
@@ -873,7 +907,7 @@ body.modal-open {
   }
 
   .brand img {
-    height: 28px;
+    height: 38px;
   }
 
   .cta-box,
