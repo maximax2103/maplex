@@ -194,7 +194,7 @@ input {
 
 .hero-copy h1 {
   font-size: clamp(3.1rem, 8vw, 6rem);
-  max-width: 13.2ch;
+  max-width: 15.4ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -844,6 +844,10 @@ body.modal-open {
 }
 
 @media (min-width: 768px) {
+  .hero-copy h1 {
+    max-width: 15.8ch;
+  }
+
   .hero-actions {
     flex-direction: row;
     flex-wrap: wrap;
@@ -887,6 +891,10 @@ body.modal-open {
 }
 
 @media (min-width: 1024px) {
+  .hero-copy h1 {
+    max-width: 16.4ch;
+  }
+
   .nav {
     display: flex;
   }
