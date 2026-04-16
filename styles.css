@@ -53,7 +53,7 @@ input {
 }
 
 .page-shell {
-  overflow: clip;
+  overflow-x: clip;
 }
 
 .container {
@@ -78,12 +78,15 @@ input {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 40;
   backdrop-filter: blur(18px);
   background: rgba(247, 247, 251, 0.72);
   border-bottom: 1px solid rgba(17, 24, 39, 0.05);
+  box-shadow: 0 10px 30px rgba(15, 23, 34, 0.08);
 }
 
 .header-inner {
@@ -91,7 +94,7 @@ input {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  min-height: 132px;
+  min-height: 140px;
 }
 
 .brand {
@@ -105,8 +108,12 @@ input {
   width: auto;
   height: auto;
   display: block;
-  max-width: 472px;
-  max-height: 112px;
+  max-width: 540px;
+  max-height: 128px;
+}
+
+main {
+  padding-top: 140px;
 }
 
 .footer-logo {
@@ -161,7 +168,7 @@ input {
 }
 
 .hero {
-  padding-top: 46px;
+  padding-top: 30px;
 }
 
 .hero-grid,
@@ -916,7 +923,7 @@ body.modal-open {
 
 @media (max-width: 767px) {
   .header-inner {
-    min-height: 112px;
+    min-height: 120px;
   }
 
   .button-small {
@@ -928,12 +935,12 @@ body.modal-open {
   }
 
   .hero {
-    padding-top: 28px;
+    padding-top: 24px;
   }
 
   .brand-logo {
-    max-width: 376px;
-    max-height: 88px;
+    max-width: 420px;
+    max-height: 98px;
   }
 
   .footer-logo {
