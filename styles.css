@@ -81,10 +81,10 @@ input {
   position: sticky;
   top: 0;
   z-index: 60;
-  backdrop-filter: blur(18px);
-  background: rgba(247, 247, 251, 0.72);
-  border-bottom: 1px solid rgba(17, 24, 39, 0.05);
-  box-shadow: 0 10px 30px rgba(15, 23, 34, 0.08);
+  backdrop-filter: blur(12px);
+  background: rgba(247, 247, 251, 0.52);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.035);
+  box-shadow: 0 8px 22px rgba(15, 23, 34, 0.05);
 }
 
 .header-inner {
@@ -92,7 +92,7 @@ input {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  min-height: 140px;
+  min-height: 116px;
 }
 
 .brand {
@@ -106,8 +106,8 @@ input {
   width: auto;
   height: auto;
   display: block;
-  max-width: 540px;
-  max-height: 128px;
+  max-width: 584px;
+  max-height: 110px;
 }
 
 .footer-logo {
@@ -917,7 +917,7 @@ body.modal-open {
 
 @media (max-width: 767px) {
   .header-inner {
-    min-height: 120px;
+    min-height: 96px;
   }
 
   .button-small {
@@ -933,8 +933,8 @@ body.modal-open {
   }
 
   .brand-logo {
-    max-width: 420px;
-    max-height: 98px;
+    max-width: 448px;
+    max-height: 84px;
   }
 
   .footer-logo {
